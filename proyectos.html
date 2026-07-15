@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Proyectos — Cordova Code Solutions</title>
+<meta name="description" content="Proyectos propios de Cordova Code Solutions, incluyendo PuntoTV.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<header>
+  <a class="brand" href="index.html">
+    <span class="brand-main">Diego Córdova</span>
+    <span class="brand-sub">Cordova Code Solutions</span>
+  </a>
+  <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+  <nav id="mainNav">
+    <a href="index.html">Inicio</a>
+    <a href="servicios.html">Servicios</a>
+    <a href="proyectos.html" aria-current="page">Proyectos</a>
+    <a href="sobre-mi.html">Sobre mí</a>
+  </nav>
+</header>
+
+<main>
+  <section class="page" id="proyectos">
+    <p class="eyebrow">Cordova Code Solutions</p>
+    <h1>Proyectos</h1>
+    <p class="lede">
+      Todavía no hay clientes ni proyectos públicos terminados — esto recién está empezando.
+      Este es el primer proyecto propio, en fase de exploración técnica y prototipado.
+    </p>
+
+    <div class="cards">
+      <div class="card">
+        <span class="status">En desarrollo — prototipado</span>
+        <h3>PuntoTV — Control remoto trackpad para TV</h3>
+        <p>
+          Los controles remotos de TV actuales están diseñados para navegación por D-pad, no para
+          navegación tipo mouse — algo incómodo en cualquier pantalla que reutiliza interfaces
+          pensadas para puntero (navegadores, tiendas de apps, formularios, mapas). PuntoTV es una
+          app de celular que traduce gestos táctiles en movimiento de cursor continuo y proporcional
+          sobre la TV.
+        </p>
+        <p>
+          Diagnóstico técnico: el protocolo estándar de Android TV Remote v2 solo transmite eventos
+          de tecla discretos, sin coordenadas de mouse — una limitación de diseño del protocolo, no
+          un bug menor. En evaluación: Bluetooth HID, scrcpy/UHID y el protocolo Google TV como
+          transporte definitivo.
+        </p>
+        <div class="chips">
+          <span class="chip">Android (Kotlin)</span>
+          <span class="chip">Android TV Remote v2</span>
+          <span class="chip">Bluetooth HID</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="band">
+      <p class="lede" style="margin-bottom:0;">
+        Si tienes un problema que se resuelve con backend, automatización o cloud, esta página va a
+        ir mostrando cómo lo estoy trabajando. Vuelve pronto.
+      </p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <span>Diego Córdova Opazo</span>
+  <span>Cordova Code Solutions — Viña del Mar, Chile</span>
+</footer>
+
+<script src="assets/script.js"></script>
+</body>
+</html>
