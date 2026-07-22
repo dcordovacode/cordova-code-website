@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Software Solutions — Cordova Code Solutions</title>
+<meta name="description" content="Desarrollo de software a medida: landing pages y sitios con un propósito claro, y funcionalidades puntuales que faltan en un sistema existente — sin plantillas genéricas.">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://cordovacodes.com/software.html">
+<meta property="og:title" content="Software Solutions — Cordova Code Solutions">
+<meta property="og:description" content="Desarrollo de software a medida: landing pages y sitios con un propósito claro, y funcionalidades puntuales que faltan en un sistema existente — sin plantillas genéricas.">
+<meta property="og:image" content="https://cordovacodes.com/assets/og-image.svg">
+<meta property="og:image:type" content="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<header>
+  <a class="brand" href="index.html">
+    <span class="brand-main">Cordova Code Solutions</span>
+    <span class="brand-sub">Cloud &amp; Data Architecture</span>
+  </a>
+  <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+  <nav id="mainNav">
+    <a href="index.html">Inicio</a>
+    <a href="cloud.html">Cloud &amp; Data</a>
+    <a href="software.html" aria-current="page">Software</a>
+    <a href="perfil.html">Perfil</a>
+  </nav>
+</header>
+
+<main>
+  <section class="page" id="software">
+    <p class="eyebrow">Línea complementaria</p>
+    <h1>Software Solutions</h1>
+    <p class="lede">
+      Desarrollo de software a medida para cuando el problema no requiere arquitectura cloud:
+      sitios institucionales, landing pages, o una funcionalidad puntual sobre un sistema que ya
+      existe. No páginas genéricas de plantilla — cada proyecto resuelve algo concreto.
+    </p>
+
+    <!-- Íconos: Lucide (ISC License) https://lucide.dev -->
+    <div class="cards">
+      <div class="service">
+        <h3><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2" /><path d="M3 9h18" /><path d="M9 21V9" /></svg><span class="num">01</span> Sitios y landing pages a medida</h3>
+        <p>
+          Sitios institucionales o landing pages construidos a medida — sin plantillas genéricas —
+          pensados para comunicar una propuesta de valor concreta y convertir visitas en contacto.
+        </p>
+      </div>
+
+      <div class="service">
+        <h3><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15.39 4.39a1 1 0 0 0 1.68-.474 2.5 2.5 0 1 1 3.014 3.015 1 1 0 0 0-.474 1.68l1.683 1.682a2.414 2.414 0 0 1 0 3.414L19.61 15.39a1 1 0 0 1-1.68-.474 2.5 2.5 0 1 0-3.014 3.015 1 1 0 0 1 .474 1.68l-1.683 1.682a2.414 2.414 0 0 1-3.414 0L8.61 19.61a1 1 0 0 0-1.68.474 2.5 2.5 0 1 1-3.014-3.015 1 1 0 0 0 .474-1.68l-1.683-1.682a2.414 2.414 0 0 1 0-3.414L4.39 8.61a1 1 0 0 1 1.68.474 2.5 2.5 0 1 0 3.014-3.015 1 1 0 0 1-.474-1.68l1.683-1.682a2.414 2.414 0 0 1 3.414 0z" /></svg><span class="num">02</span> Funcionalidades puntuales</h3>
+        <p>
+          Agregar o modificar una funcionalidad específica sobre un sitio o sistema ya existente,
+          sin necesidad de un proyecto completo desde cero.
+        </p>
+      </div>
+    </div>
+
+    <div class="band">
+      <h2>Proyectos</h2>
+      <p class="lede" style="margin-bottom:24px;">
+        Software construido con el mismo estándar que se le exige a un proyecto de cliente.
+      </p>
+      <div class="cards">
+        <div class="card">
+          <span class="status">En desarrollo — prototipado</span>
+          <h3>PuntoTV — Control remoto trackpad para TV</h3>
+          <p>
+            Los controles remotos de TV actuales están diseñados para navegación por D-pad, no para
+            navegación tipo mouse — algo incómodo en cualquier pantalla que reutiliza interfaces
+            pensadas para puntero (navegadores, tiendas de apps, formularios, mapas). PuntoTV es una
+            app de celular que traduce gestos táctiles en movimiento de cursor continuo y
+            proporcional sobre la TV.
+          </p>
+          <p>
+            Diagnóstico técnico: el protocolo estándar de Android TV Remote v2 solo transmite
+            eventos de tecla discretos, sin coordenadas de mouse — una limitación de diseño del
+            protocolo, no un bug menor. En evaluación: Bluetooth HID, scrcpy/UHID y el protocolo
+            Google TV como transporte definitivo.
+          </p>
+          <div class="chips">
+            <span class="chip">Android (Kotlin)</span>
+            <span class="chip">Android TV Remote v2</span>
+            <span class="chip">Bluetooth HID</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="band">
+      <p class="lede" style="margin-bottom:0;">
+        ¿Necesitas un sitio o una funcionalidad puntual?
+        <a class="btn primary" href="mailto:diego@cordovacodes.com" style="margin-left:10px;">Escríbenos</a>
+      </p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <span>Cordova Code Solutions</span>
+  <span>Viña del Mar, Chile</span>
+</footer>
+
+<script src="assets/script.js"></script>
+</body>
+</html>

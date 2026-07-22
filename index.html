@@ -3,8 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cordova Code Solutions — Software de calidad</title>
-<meta name="description" content="Soluciones de software para empresas: APIs REST, automatización de procesos, integraciones cloud, análisis de datos. Arquitectura escalable y código de calidad.">
+<title>Cordova Code Solutions — Software y arquitectura para tu negocio</title>
+<meta name="description" content="Automatización de procesos, integración de sistemas y arquitectura serverless en AWS, más sitios y funcionalidades a medida.">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://cordovacodes.com/">
+<meta property="og:title" content="Cordova Code Solutions — Software y arquitectura para tu negocio">
+<meta property="og:description" content="Automatización de procesos, integración de sistemas y arquitectura serverless en AWS, más sitios y funcionalidades a medida.">
+<meta property="og:image" content="https://cordovacodes.com/assets/og-image.svg">
+<meta property="og:image:type" content="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -15,69 +22,83 @@
 <header>
   <a class="brand" href="index.html">
     <span class="brand-main">Cordova Code Solutions</span>
-    <span class="brand-sub">Software a medida</span>
+    <span class="brand-sub">Cloud &amp; Data Architecture</span>
   </a>
   <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
   <nav id="mainNav">
     <a href="index.html" aria-current="page">Inicio</a>
-    <a href="servicios.html">Servicios</a>
-    <a href="proyectos.html">Proyectos</a>
-    <a href="sobre-mi.html">Sobre mí</a>
+    <a href="cloud.html">Cloud &amp; Data</a>
+    <a href="software.html">Software</a>
+    <a href="perfil.html">Perfil</a>
   </nav>
 </header>
 
 <main>
   <section class="page" id="inicio">
-    <p class="eyebrow">Soluciones de software</p>
-    <h1>Cordova Code Solutions</h1>
+    <p class="eyebrow">Cordova Code Solutions</p>
+    <h1>Software que automatiza, conecta y escala tu negocio</h1>
     <div class="pulse" aria-hidden="true">
       <span></span><span></span><span></span><span></span><span></span>
       <span></span><span></span><span></span><span></span><span></span>
     </div>
     <p class="lede">
-      Resolvemos problemas de negocio con software: APIs REST, automatización de procesos,
-      integraciones entre sistemas, y análisis de datos en la nube. Arquitecturas escalables y
-      mantenibles, construidas con código limpio y buenas prácticas — para empresas que necesitan
-      soluciones que crecen con el negocio.
+      La tecnología debería resolver problemas, no crear otros nuevos. Cordova Code Solutions
+      ayuda a negocios a construir los sistemas y sitios que necesitan, sin complejidad de más.
     </p>
-    <div class="btn-row">
-      <a class="btn primary" href="servicios.html">Ver servicios</a>
-      <a class="btn" href="proyectos.html">Casos en desarrollo</a>
-    </div>
-    <div class="chips">
-      <span class="chip">Python</span>
-      <span class="chip">AWS Lambda</span>
-      <span class="chip">Step Functions</span>
-      <span class="chip">APIs REST</span>
-      <span class="chip">DynamoDB</span>
-      <span class="chip">Arquitectura Serverless</span>
+
+    <div class="band" style="margin-top:0;padding-top:0;border-top:none;">
+      <h2>Dos líneas de trabajo</h2>
+      <p class="lede" style="margin-bottom:24px;">
+        Todo el trabajo entra en una de estas dos líneas. La primera es la especialización real del
+        negocio; la segunda, un complemento para cuando el problema no requiere arquitectura cloud.
+      </p>
+      <div class="cards">
+        <div class="card">
+          <span class="status">Especialización principal</span>
+          <h3>Cloud &amp; Data Architecture</h3>
+          <p>
+            Arquitectura serverless orientada a eventos en AWS — Lambda, Step Functions,
+            EventBridge, SQS — con persistencia en DynamoDB o Aurora PostgreSQL según el caso,
+            pipelines de datos en BigQuery e IA aplicada como capa adicional.
+          </p>
+          <div class="chips">
+            <span class="chip">Auditoría técnica</span>
+            <span class="chip">Backend serverless</span>
+            <span class="chip">Automatización</span>
+            <span class="chip">Datos / ETL</span>
+            <span class="chip">IA aplicada</span>
+          </div>
+          <div class="btn-row" style="margin-top:16px;">
+            <a class="btn primary" href="cloud.html">Explorar servicios</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Software Solutions</h3>
+          <p>
+            Desarrollo de software a medida — landing pages, sitios básicos y funcionalidades
+            puntuales — para cuando el problema no requiere arquitectura cloud.
+          </p>
+          <div class="btn-row" style="margin-top:16px;">
+            <a class="btn" href="software.html">Ver detalle</a>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="band">
-      <h2>Cordova Code Solutions</h2>
-      <p class="lede" style="margin-bottom:16px;">
-        Empresa unipersonal enfocada en desarrollar soluciones informáticas para empresas: desde
-        automatización de procesos hasta sistemas a medida e integraciones cloud. No hacemos
-        "páginas web" — resolvemos problemas de negocio con software.
+      <p class="lede" style="margin-bottom:0;">
+        ¿No sabes por dónde empezar? Una auditoría técnica es el primer paso, de menor riesgo, para
+        diagnosticar el problema antes de comprometerte a un proyecto completo.
+        <a class="btn primary" href="mailto:diego@cordovacodes.com" style="margin-left:10px;">Escríbenos</a>
       </p>
-      <div class="btn-row">
-        <a class="btn" href="servicios.html">Ver servicios</a>
-      </div>
-      <div class="chips">
-        <span class="chip">Desarrollo backend</span>
-        <span class="chip">Automatización de procesos</span>
-        <span class="chip">Software a medida</span>
-        <span class="chip">Integraciones entre sistemas</span>
-        <span class="chip">Soluciones cloud</span>
-        <span class="chip">IA aplicada</span>
-      </div>
     </div>
   </section>
 </main>
 
 <footer>
-  <span>Diego Córdova Opazo</span>
-  <span>Cordova Code Solutions — Viña del Mar, Chile</span>
+  <span>Cordova Code Solutions</span>
+  <span>Viña del Mar, Chile</span>
 </footer>
 
 <script src="assets/script.js"></script>

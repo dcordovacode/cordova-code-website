@@ -1,0 +1,7 @@
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#14171F"/>
+  <path d="M700 195a120 120 0 1 0 0 240" stroke="#E7A33E" stroke-width="20" fill="none" stroke-linecap="round"/>
+  <path d="M500 195a120 120 0 1 1 0 240" stroke="#4FBFAE" stroke-width="20" fill="none" stroke-linecap="round"/>
+  <text x="600" y="500" text-anchor="middle" font-family="Arial, sans-serif" font-size="56" font-weight="700" fill="#EDEAE2">Cordova Code Solutions</text>
+  <text x="600" y="550" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" letter-spacing="2" fill="#98A0B0">CLOUD &amp; DATA ARCHITECTURE · SOFTWARE SOLUTIONS</text>
+</svg>

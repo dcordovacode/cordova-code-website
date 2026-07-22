@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cloud &amp; Data Architecture — Cordova Code Solutions</title>
+<meta name="description" content="Arquitectura serverless orientada a eventos en AWS: Lambda, Step Functions, EventBridge, SQS, DynamoDB, Aurora PostgreSQL y BigQuery. Sistemas que escalan con el negocio.">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://cordovacodes.com/cloud.html">
+<meta property="og:title" content="Cloud &amp; Data Architecture — Cordova Code Solutions">
+<meta property="og:description" content="Arquitectura serverless orientada a eventos en AWS: Lambda, Step Functions, EventBridge, SQS, DynamoDB, Aurora PostgreSQL y BigQuery. Sistemas que escalan con el negocio.">
+<meta property="og:image" content="https://cordovacodes.com/assets/og-image.svg">
+<meta property="og:image:type" content="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<header>
+  <a class="brand" href="index.html">
+    <span class="brand-main">Cordova Code Solutions</span>
+    <span class="brand-sub">Cloud &amp; Data Architecture</span>
+  </a>
+  <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+  <nav id="mainNav">
+    <a href="index.html">Inicio</a>
+    <a href="cloud.html" aria-current="page">Cloud &amp; Data</a>
+    <a href="software.html">Software</a>
+    <a href="perfil.html">Perfil</a>
+  </nav>
+</header>
+
+<main>
+  <section class="page" id="cloud">
+    <p class="eyebrow">Especialización principal</p>
+    <h1>Cloud &amp; Data Architecture</h1>
+    <p class="lede">
+      Arquitectura serverless orientada a eventos en AWS: sistemas que escalan con el negocio del
+      cliente en vez de scripts sueltos que se rompen bajo carga. Pensado para negocios donde los
+      datos todavía se mueven a mano entre sistemas que no se hablan entre sí.
+    </p>
+    <div class="chips">
+      <span class="chip">AWS Lambda</span>
+      <span class="chip">Step Functions</span>
+      <span class="chip">EventBridge</span>
+      <span class="chip">SQS</span>
+      <span class="chip">DynamoDB</span>
+      <span class="chip">Aurora PostgreSQL</span>
+      <span class="chip">BigQuery</span>
+      <span class="chip">APIs REST</span>
+    </div>
+
+    <div class="band">
+      <h2>Por qué arquitectura serverless</h2>
+      <p class="lede" style="margin-bottom:0;">
+        La mayoría de los problemas de backend no necesitan un servidor corriendo 24/7 — necesitan
+        código que reacciona a eventos: una petición HTTP, un archivo que llega a un bucket, un
+        mensaje en una cola. Diseñar sobre AWS Lambda, Step Functions, EventBridge y SQS significa
+        pagar solo por lo que se ejecuta, escalar automáticamente con la carga real, y no mantener
+        infraestructura ociosa esperando tráfico.
+      </p>
+    </div>
+
+    <div class="band">
+      <pre class="mermaid">
+flowchart LR
+  EVT["Evento: petición HTTP,<br/>archivo nuevo, mensaje en cola"] --> LAM[AWS Lambda]
+  LAM --> SF["Step Functions<br/>(orquestación)"]
+  LAM --> DB[("DynamoDB / Aurora<br/>PostgreSQL")]
+  SF --> DB
+  DB --> EB[EventBridge / SQS]
+  EB --> OUT["Otros sistemas / BigQuery"]
+      </pre>
+    </div>
+
+    <div class="band">
+      <p class="lede" style="margin-bottom:0;">
+        La capa de persistencia se elige según el problema, no por defecto: DynamoDB para acceso de
+        baja latencia a alta escala con patrones de consulta predecibles, Aurora PostgreSQL cuando
+        el dominio necesita relaciones, transacciones o consultas ad-hoc complejas. Sobre esa base,
+        la IA aplicada (clasificación, extracción, agentes) se integra como una capa adicional
+        cuando el problema lo justifica — no como agregado obligatorio.
+      </p>
+    </div>
+
+    <div class="band">
+      <h2>Servicios</h2>
+      <!-- Íconos: Lucide (ISC License) https://lucide.dev -->
+      <div class="cards">
+        <div class="service entry">
+          <h3><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21 21-4.34-4.34" /><circle cx="11" cy="11" r="8" /></svg><span class="num">01</span> Auditoría / Diagnóstico técnico</h3>
+          <p>
+            Revisión de arquitectura AWS, revisión de costos serverless, diagnóstico de un pipeline
+            de datos o code review de un sistema existente. Entregable: informe con hallazgos y
+            recomendaciones priorizadas. El punto de entrada de menor riesgo para empezar a
+            trabajar juntos.
+          </p>
+        </div>
+
+        <div class="service">
+          <h3><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="8" x="2" y="2" rx="2" ry="2" /><rect width="20" height="8" x="2" y="14" rx="2" ry="2" /><line x1="6" x2="6.01" y1="6" y2="6" /><line x1="6" x2="6.01" y1="18" y2="18" /></svg><span class="num">02</span> Arquitectura serverless y backend a medida</h3>
+          <p>
+            APIs REST, integraciones entre sistemas y backend orientado a eventos sobre AWS Lambda
+            y Step Functions, con persistencia en DynamoDB o Aurora PostgreSQL según el caso de uso.
+          </p>
+        </div>
+
+        <div class="service">
+          <h3><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z" /></svg><span class="num">03</span> Automatización de procesos</h3>
+          <p>
+            Eliminar trabajo manual repetitivo vía Lambdas, Step Functions y EventBridge/SQS como
+            conectores entre herramientas — por ejemplo, conectar un ERP con una planilla o
+            automatizar reportes.
+          </p>
+        </div>
+
+        <div class="service">
+          <h3><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3" /><path d="M3 5V19A9 3 0 0 0 21 19V5" /><path d="M3 12A9 3 0 0 0 21 12" /></svg><span class="num">04</span> Procesamiento y automatización de datos / ETLs</h3>
+          <p>Pipelines de datos propios, dashboards y modelado en BigQuery.</p>
+        </div>
+
+        <div class="service">
+          <h3><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z" /><path d="M20 2v4" /><path d="M22 4h-4" /><circle cx="4" cy="20" r="2" /></svg><span class="num">05</span> Automatización con IA aplicada</h3>
+          <p>
+            IA como capa adicional sobre procesos e integraciones existentes — agentes,
+            clasificación y extracción de datos, chatbots internos.
+          </p>
+        </div>
+
+        <div class="service">
+          <h3><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.106-3.105c.32-.322.863-.22.983.218a6 6 0 0 1-8.259 7.057l-7.91 7.91a1 1 0 0 1-2.999-3l7.91-7.91a6 6 0 0 1 7.057-8.259c.438.12.54.662.219.984z" /></svg><span class="num">06</span> Mantenimiento y soporte mensual</h3>
+          <p>Retainer mensual para mantener y evolucionar la arquitectura ya construida.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="band">
+      <h2>Cómo trabajamos</h2>
+      <div class="cards">
+        <div class="service">
+          <h3><span class="num">01</span> Diagnóstico</h3>
+          <p>Se revisa el problema real antes de proponer una solución — normalmente empieza con la auditoría técnica.</p>
+        </div>
+        <div class="service">
+          <h3><span class="num">02</span> Propuesta</h3>
+          <p>Alcance y prioridades claras antes de escribir una línea de código.</p>
+        </div>
+        <div class="service">
+          <h3><span class="num">03</span> Desarrollo</h3>
+          <p>Construcción iterativa, con visibilidad del avance en cada etapa.</p>
+        </div>
+        <div class="service">
+          <h3><span class="num">04</span> Soporte</h3>
+          <p>Mantenimiento y evolución de lo construido, vía el retainer mensual.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="band">
+      <p class="lede" style="margin-bottom:0;font-size:14px;">
+        Principios: escalabilidad, costo optimizado (pay-per-use), seguridad (cifrado en tránsito y
+        en reposo, control de acceso, manejo de credenciales), observabilidad y mantenibilidad a
+        largo plazo.
+      </p>
+    </div>
+
+    <div class="band">
+      <p class="lede" style="margin-bottom:16px;">
+        Detrás de esta arquitectura hay experiencia real construyendo sistemas serverless en
+        producción (Airnguru) y automatización de datos a escala (Copec) — no es teoría.
+        <a class="text-link" href="perfil.html">Ver perfil técnico</a>.
+      </p>
+      <p class="lede" style="margin-bottom:0;">
+        ¿Por dónde empezar? La auditoría / diagnóstico técnico (servicio 01) es el punto de entrada
+        de menor riesgo — un diagnóstico concreto antes de comprometerte a un proyecto completo.
+        <a class="btn primary" href="mailto:diego@cordovacodes.com" style="margin-left:10px;">Escríbenos</a>
+      </p>
+    </div>
+
+    <div class="band">
+      <h2>Preguntas frecuentes</h2>
+      <details>
+        <summary>¿Trabajan con empresas pequeñas o solo con empresas grandes?</summary>
+        <p>Con ambas. El punto de entrada — la auditoría / diagnóstico técnico — está pensado
+        justamente para calibrar el alcance según el tamaño y la urgencia real del problema, no al
+        revés.</p>
+      </details>
+      <details>
+        <summary>¿Qué pasa si no tengo equipo técnico interno?</summary>
+        <p>No es un requisito. El diagnóstico y la propuesta se explican en términos de negocio, no
+        solo técnicos, para que puedas decidir sin necesitar un equipo propio.</p>
+      </details>
+      <details>
+        <summary>¿Cuánto dura una auditoría / diagnóstico técnico?</summary>
+        <!-- TODO(Diego): confirmar duración típica antes de publicar; no se inventa un plazo -->
+        <p>Depende del alcance del sistema a revisar — se define en la primera conversación.</p>
+      </details>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <span>Cordova Code Solutions</span>
+  <span>Viña del Mar, Chile</span>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script src="assets/script.js"></script>
+</body>
+</html>
