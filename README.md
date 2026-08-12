@@ -32,12 +32,16 @@ cordova-code-website/
 ├── index.html          Inicio genérico — luego bifurca a las dos líneas de servicio
 ├── cloud.html           Cloud & Data Architecture (especialización principal)
 ├── software.html        Software Solutions + proyecto propio (PuntoTV)
-├── perfil.html           Resumen del fundador, stack técnico, link a LinkedIn
+├── perfil.html           Resumen del fundador, stack técnico, link a LinkedIn y al dev portfolio
+├── dev/                  Portfolio personal de Diego (proyectos propios, no de la empresa)
+│   ├── index.html       Landing personal — foto informal, novedades, links a redes
+│   └── proyectos.html   Bloques de proyectos personales, enlazan a sus repos en GitHub
 ├── assets/
-│   ├── styles.css       Hoja de estilos compartida por todas las páginas
+│   ├── styles.css       Hoja de estilos compartida por todas las páginas (incluye dev/)
 │   ├── script.js        Toggle del menú móvil + init de Mermaid (compartido)
 │   ├── favicon.svg      Ícono de marca (mark abstracto, paleta navy/amber/teal)
-│   └── og-image.svg     Diseño fuente para preview en redes — ver nota abajo
+│   ├── og-image.svg     Diseño fuente para preview en redes — ver nota abajo
+│   └── img/             Fotos (ej. diego_informal.png, usada en dev/index.html)
 └── README.md
 ```
 
@@ -59,7 +63,13 @@ apunten a ella, y marcar `aria-current="page"` en el enlace correspondiente a la
   remoto trackpad para TV, en fase de prototipado) como evidencia de trabajo real.
 - **perfil.html**: resumen breve del fundador (educación, experiencia, especialización) con link a
   LinkedIn, y el stack técnico agrupado por categoría. Reemplaza el timeline detallado que tenía
-  antes `sobre-mi.html` — el historial completo vive en LinkedIn, no en el sitio.
+  antes `sobre-mi.html` — el historial completo vive en LinkedIn, no en el sitio. Enlaza al dev
+  portfolio personal (`dev/`) para quien busque proyectos fuera de lo profesional.
+- **dev/**: portfolio personal de Diego, deliberadamente separado del sitio de negocio en contenido
+  y tono (más informal), aunque reutiliza el mismo sistema visual (`assets/styles.css`) por
+  consistencia y para no mantener dos hojas de estilo. `index.html` es la landing (foto, intro,
+  novedades); `proyectos.html` son bloques de proyectos personales que enlazan directo a sus repos
+  en GitHub — no hay páginas de detalle propias todavía.
 
 ## Proceso de creación
 
@@ -113,6 +123,15 @@ apunten a ella, y marcar `aria-current="page"` en el enlace correspondiente a la
     `<details>/<summary>` nativo (sin JS adicional); e íconos Lucide (ISC License) en cada servicio
     de `cloud.html` y `software.html`. Se agregaron `assets/favicon.svg` y `assets/og-image.svg` y
     se enlazaron en el `<head>` de las 4 páginas.
+14. **`dev/`, portfolio personal**: se agregó `perfil.html` con un placeholder de foto (`.avatar`,
+    iniciales "DC") a la espera de una foto formal, y un link al nuevo portfolio personal. `dev/`
+    reutiliza `assets/styles.css` (decisión confirmada con Diego) pero con marca propia ("Diego
+    Córdova" en vez de "Cordova Code Solutions") y tono informal. Los 3 proyectos mostrados en
+    `dev/proyectos.html` (Super-Pong, Game of Life, programación competitiva) se eligieron
+    filtrando los repos reales de `github.com/dcordovao` — se excluyeron tareas académicas de la U.
+    Estas decisiones (lista de proyectos, y que "otra página" en la instrucción original se refiere
+    al link de vuelta a `cordovacodes.com`) fueron un criterio propio a falta de confirmación
+    explícita — ver "Próximos pasos" para lo pendiente de validar.
 
 ## Próximos pasos sugeridos
 
@@ -130,3 +149,14 @@ apunten a ella, y marcar `aria-current="page"` en el enlace correspondiente a la
   actualizar `og:image`/`og:image:type` en las 4 páginas antes de publicar el sitio.
 - Confirmar con Diego la duración típica de una auditoría / diagnóstico técnico para reemplazar el
   placeholder en la FAQ de `cloud.html` (marcado con comentario `TODO(Diego)`).
+- **Pendiente de confirmar sobre `dev/`**: si la lista de proyectos en `dev/proyectos.html`
+  (Super-Pong, Game of Life, programación competitiva) es la correcta o si Diego quiere otra
+  selección; qué redes sociales además de LinkedIn/GitHub agregar (Instagram, X, etc., con su URL);
+  si "otra página" en el pedido original era el link a `cordovacodes.com` (así quedó implementado)
+  o algo distinto; y reemplazar los `.project-thumb` (ícono placeholder) por capturas reales cuando
+  Diego las pase.
+- **Foto formal para `perfil.html`**: hoy tiene un placeholder (`.avatar`, iniciales "DC") — falta
+  la foto real, marcada con comentario `TODO(Diego)` en el HTML.
+- **Optimizar `assets/img/diego_informal.png`**: pesa ~2.5MB. No había herramienta de compresión de
+  imágenes disponible en el entorno donde se subió — comprimirla (TinyPNG o similar) antes de
+  publicar, para no penalizar el tiempo de carga de `dev/index.html`.

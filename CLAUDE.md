@@ -62,6 +62,23 @@ nuevo dentro del HTML.
 - No inventar casos de éxito, testimonios ni métricas de clientes que no existan.
 - CTAs claros pero sin prometer disponibilidad o servicios fuera de lo que realmente se ofrece.
 
+## `dev/` — portfolio personal de Diego
+
+`dev/` es el portfolio personal de Diego (proyectos propios, experimentos, "cosas locas"), alojado
+en el mismo dominio pero en ruta separada del sitio de negocio. Reutiliza `assets/styles.css` por
+decisión explícita (consistencia, sin mantener dos sistemas de diseño), pero **no** sigue las
+reglas de voz de marca ni de catálogo de servicios del resto del repo — es contenido personal, no
+de Cordova Code Solutions:
+
+- Puede usar primera persona y tono informal libremente — no aplica la regla de "voz de empresa".
+- Los proyectos que se muestren ahí no necesitan encajar en Cloud & Data Architecture ni Software
+  Solutions — son proyectos personales, no parte del catálogo de servicios de la empresa.
+- El header/nav de `dev/` usa marca propia ("Diego Córdova" / "Dev Portfolio"), no la de la
+  empresa, y enlaza de vuelta a `cordovacodes.com` y a `perfil.html` para quien busque lo
+  profesional.
+- Igual aplica: no inventar proyectos, capturas o descripciones que no existan — los proyectos
+  listados deben corresponder a repos reales de `github.com/dcordovao`.
+
 ## Reglas de documentación (README, CLAUDE.md, cualquier doc del repo)
 
 - Todo documento abre con objetivo y contexto de negocio, nunca con tono de tutorial paso a paso.
