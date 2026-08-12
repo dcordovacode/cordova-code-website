@@ -41,7 +41,7 @@ cordova-code-website/
 │   ├── script.js        Toggle del menú móvil + init de Mermaid (compartido)
 │   ├── favicon.svg      Ícono de marca (mark abstracto, paleta navy/amber/teal)
 │   ├── og-image.svg     Diseño fuente para preview en redes — ver nota abajo
-│   └── img/             Fotos (ej. diego_informal.png, usada en dev/index.html)
+│   └── img/             Fotos (ej. diego_formal.jpg, usada en dev/index.html)
 └── README.md
 ```
 
@@ -129,9 +129,17 @@ apunten a ella, y marcar `aria-current="page"` en el enlace correspondiente a la
     Córdova" en vez de "Cordova Code Solutions") y tono informal. Los 3 proyectos mostrados en
     `dev/proyectos.html` (Super-Pong, Game of Life, programación competitiva) se eligieron
     filtrando los repos reales de `github.com/dcordovao` — se excluyeron tareas académicas de la U.
-    Estas decisiones (lista de proyectos, y que "otra página" en la instrucción original se refiere
-    al link de vuelta a `cordovacodes.com`) fueron un criterio propio a falta de confirmación
+    Estas decisiones (lista de proyectos) fueron un criterio propio a falta de confirmación
     explícita — ver "Próximos pasos" para lo pendiente de validar.
+15. **`dev/` separado del sitio de negocio, no enlazado de vuelta** (confirmado con Diego): se quitó
+    el link "Perfil profesional" que volvía de `dev/` a `perfil.html` — el portfolio personal no
+    debe sentirse "atado" al sitio de la empresa. El link inverso (`perfil.html` → `dev/`) ahora abre
+    en pestaña nueva (`target="_blank"`), reforzando que son dos experiencias separadas aunque vivan
+    en el mismo dominio. Se agregó `cordova-code-website` mismo como proyecto en
+    `dev/proyectos.html` — es código real que vale la pena mostrar. La foto se actualizó a
+    `assets/img/diego_formal.jpg` (reemplaza a `diego_informal.png`, que Diego eliminó) para
+    `dev/index.html`; se le agregaron atributos `width`/`height` en el HTML además de la clase CSS
+    para evitar que se renderice a tamaño completo antes de que cargue el CSS.
 
 ## Próximos pasos sugeridos
 
@@ -157,6 +165,7 @@ apunten a ella, y marcar `aria-current="page"` en el enlace correspondiente a la
   Diego las pase.
 - **Foto formal para `perfil.html`**: hoy tiene un placeholder (`.avatar`, iniciales "DC") — falta
   la foto real, marcada con comentario `TODO(Diego)` en el HTML.
-- **Optimizar `assets/img/diego_informal.png`**: pesa ~2.5MB. No había herramienta de compresión de
-  imágenes disponible en el entorno donde se subió — comprimirla (TinyPNG o similar) antes de
-  publicar, para no penalizar el tiempo de carga de `dev/index.html`.
+- **Optimizar `assets/img/diego_formal.jpg`**: es una foto de celular a resolución completa
+  (3456×4608px, ~2.9MB) mostrada en un círculo de 160px — el navegador la descarga entera igual.
+  No hay herramienta de compresión/resize disponible en este entorno — comprimirla y/o redimensionarla
+  (TinyPNG, Squoosh, o similar) a algo cercano a 320×320px antes de publicar.
